@@ -12,5 +12,7 @@ public class MovableUser {
 		System.out.println("c "+ c.getTimeToMove(1));
 
 	}
-
+	public double getTotalTime(MovableObject a) {
+		return a.getTimeToMove(1);
+	}
 }

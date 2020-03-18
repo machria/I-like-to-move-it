@@ -27,4 +27,10 @@ public class GenericMovable implements MovableObject{
 		return a/this.speed;
 	}
 
+	@Override
+	public void brake() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
