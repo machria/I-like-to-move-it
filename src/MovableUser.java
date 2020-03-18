@@ -10,9 +10,18 @@ public class MovableUser {
 		System.out.println("a "+ a.getTimeToMove(1));
 		System.out.println("b "+ b.getTimeToMove(1));
 		System.out.println("c "+ c.getTimeToMove(1));
+		
+		System.out.println("a "+ getTotalTime(a));
+		System.out.println("b "+ getTotalTime(b));
+		System.out.println("c "+ getTotalTime(c));
 
 	}
-	public double getTotalTime(MovableObject a) {
-		return a.getTimeToMove(1);
+	public static double getTotalTime(MovableObject a) {
+		double count=a.getTimeToMove(1);
+		a.brake();
+		count+=a.getTimeToMove(0.1);
+		a.accelerate();
+		count+=a.getTimeToMove(1);
+		return count;
 	}
 }
